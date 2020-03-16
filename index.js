@@ -3,7 +3,7 @@ function timeSlicing(gen) {
   // 生成 generator
   gen = gen();
   // deadline 为 传进 requestIdleCallback 的回调自带的参数
-  return function(idleDeadline) {
+  return function next(idleDeadline) {
     // 剩余的 generator 可迭代部分
     let res = null;
     // generator 的未迭代完，并且这一帧的空闲时间大于 0
